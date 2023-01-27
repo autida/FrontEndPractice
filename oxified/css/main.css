@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:400,700&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.hero-bg {
+    color: rgb(51, 46, 46);
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "this content";
+    position: relative;
+}
+img {
+    grid-area: content;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.9;
+    filter: grayscale(46%);
+    z-index: -1;
+}
+.left-col {
+    background: #252b47;
+    z-index: -1;
+}
+.top {
+    width: 100%;
+    position: absolute;
+    margin-top: 3em;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    /* grid-template-columns: "oxified nav"; */
+}
+.oxified {
+    /* grid-area: oxified; */
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: 5em;
+}
+.oxified a {
+    text-decoration: none;
+    color: white;
+}
+.nav-bar {
+margin-left: 12em;
+}
+.nav-bar ul{
+    /* grid-area: nav; */
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-bar ul li {
+    display: inline;
+    font-size: 1.2rem;
+    margin-left: .7em;
+    text-align: right;
+}
+.nav-bar ul li a{
+    color: #242b42;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.nav-bar ul li button{
+    cursor: pointer;
+    background-color: #242b42;
+    border: none;
+    color: white;
+    padding: .3em .8em;
+    border-radius: .3em;
+    font-size:1em;
+    cursor: pointer;
+}
+.middle {
+    position: absolute;
+    z-index: 1;
+    margin-top: 18em;
+    margin-left: 26.1rem;
+}
+.middle h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+.middle h1 span {
+    color: #242b42;
+}
+.middle .btn {
+    margin-left: 5.7em;
+}
+.middle input[type="button"] {
+    margin-left: 2em;
+    padding: 1em 2em;
+    cursor: pointer;
+    font-weight: bold;
+    color: #242b42;
+}
+.overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 3;
+    place-content: center;
+    color: white;
+    display: none;
+    opacity: 0;
+}
+.animate-overlay {
+    animation: overlay 3s forwards;
+}
+.hero-bg {
+    animation: backwards 1s forwards;
+}
+.top{
+    animation: fadeIn 1s forwards;
+}
+.middle{
+    animation: fadeIn 2s forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-2em)
+    }
+    to {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+@keyframes overlay {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
