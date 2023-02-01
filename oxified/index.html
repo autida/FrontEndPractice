@@ -6,54 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oxified</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
+    <!-- <div id="loading-cont" class="loading-cont">
+        <img id="loading" src="./images/loading.gif">
+    </div> -->
     <div class="overlay" id="overlay">
-        <h3>Join Now...</h3>
+        <div id="target"></div>
     </div>
-    <div class="hero-bg">
-        <div class="left-col"></div>
-        <img src="images/bg.jpg" alt="Holding hands"> 
-        <section class="top">
-            <header class="oxified">
-                <a href="#">OXIFIED</a>
-            </header>
-            <div class="nav-bar">
-                <ul>
-                    <li><a href="http://127.0.0.1:5500/oxified/pages/manpower.html">Manpower</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#offer">Offer Service</a></li>
-                    <li><a href="#login" id="login">Log In</a></li>
-                    <li><button id="join-btn">Join</button></li>
-                </ul>
-            </div>
-        </section>
-        <section class="middle">
-            <h1>let us help <span>you connect.</span></h1>
-            <div class="btn">
-                <input type="button" value="Find Service" id="find-service">
-                <input type="button" value="Offer Service" id="offer-service">
-            </div>
-        </section>
-    </div>
-    <script>
-        let btn = document.getElementById("join-btn");
-        let login = document.getElementById("login");
-        let overlay = document.getElementById("overlay");
-        btn.addEventListener('click', () => {
-            overlay.style.display = 'grid';
-            overlay.classList.add('animate-overlay');
-            setTimeout(removeOverlay, 2500);
-        })
-        login.addEventListener('click', () => {
-            overlay.style.display = 'grid';
-            overlay.classList.add('animate-overlay');
-            setTimeout(removeOverlay, 2500);
-        })
-        function removeOverlay() {
-            overlay.style.display = 'none';
-            overlay.classList.remove('animate-overlay');
-        }
-    </script>
+    <div id="main-page"></div>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
